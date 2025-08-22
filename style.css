@@ -878,23 +878,27 @@ nav a:focus {
 }
 
 .enhanced-achievements {
-  background: #f8f8f8;
-  padding: 60px 20px;
+  padding: 3rem 2rem;
   text-align: center;
   border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05); /* Same as Why Choose Us */
+  backdrop-filter: blur(2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   margin-top: 40px;
 }
 
 .enhanced-achievements h2 {
-  font-size: 2rem;
-  color: #2a7a2e;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  margin-bottom: 1rem;
 }
 
 .achievements-intro {
   font-size: 1.1rem;
   margin-bottom: 30px;
-  color: #555;
+  color: #f0fdf4;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.9);
 }
 
 .achievements-grid {
@@ -905,33 +909,38 @@ nav a:focus {
 }
 
 .achievement-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 1.5rem;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: white;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .achievement-card img {
   width: 100px;
   height: auto;
   margin-bottom: 15px;
+  border-radius: 8px;
 }
 
 .achievement-card h3 {
-  color: #2a7a2e;
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: #a3e635; /* Accent color like other icons */
+  text-shadow: 0 1px 4px rgba(0,0,0,0.9);
 }
 
 .achievement-card p {
   font-size: 0.95rem;
-  color: #666;
-}
-
-.achievement-card:hover {
-  transform: scale(1.05);
+  color: #f0fdf4;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.9);
 }
 
 @media (max-width: 768px) {
@@ -1325,6 +1334,7 @@ footer {
     background-image: url('https://wallpapercave.com/wp/wp3471778.jpg');
   }
 }
+
 
 
 
