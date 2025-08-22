@@ -877,125 +877,91 @@ nav a:focus {
   text-shadow: 0 1px 4px rgba(0,0,0,0.9);
 }
 
-.enhanced-achievements {
-  text-align: center;
+/* Achievements Section */
+.achievements-section {
   padding: 60px 20px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  max-width: 1400px;
-  margin: 0 auto;
+  background: url('images/achievements-bg.jpg') no-repeat center center/cover;
+  position: relative;
+  color: #fff;
+  text-align: center;
 }
 
-.enhanced-achievements h2 {
+.achievements-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  z-index: 1;
+}
+
+.achievements-section h2,
+.achievements-intro,
+.achievements-grid {
+  position: relative;
+  z-index: 2; /* Keep content above overlay */
+}
+
+.achievements-section h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #2c3e50;
 }
 
-.enhanced-achievements .achievements-intro {
+.achievements-intro {
   font-size: 1.2rem;
   margin-bottom: 40px;
-  color: #555;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .achievements-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  gap: 20px;
 }
 
 .achievement-card {
-  background: #f8f8f8;
-  border-radius: 12px;
-  overflow: hidden;
-  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .achievement-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
 .achievement-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin: 10px 0;
-  color: #333;
 }
 
 .achievement-card p {
   font-size: 1rem;
-  color: #666;
+  color: #f0f0f0;
 }
 
 .achievement-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive for tablets */
+/* Responsive */
 @media (max-width: 1024px) {
-  .achievements-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Responsive for mobile */
-@media (max-width: 768px) {
   .achievements-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .achievements-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-section {
-    padding: 40px 0;
-    background-attachment: scroll;
-  }
-
-  .about-box {
-    padding: 2rem 1rem;
-  }
-
-  .about-box h2 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .about-box p,
-  .about-box li {
-    font-size: 1rem;
-    line-height: 1.6;
-    text-align: center;
-  }
-
-  .about-nav-btn {
-    font-size: 1.6rem;
-    padding: 0.5rem 0.8rem;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .feature-box {
-    padding: 1rem;
-  }
-
-  .enhanced-about .about-content h2 {
-    font-size: 1.8rem;
   }
 }
 
@@ -1349,6 +1315,7 @@ footer {
     background-image: url('https://wallpapercave.com/wp/wp3471778.jpg');
   }
 }
+
 
 
 
